@@ -9,18 +9,11 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { useForm } from "react-hook-form";
+import * as yup from 'yup'; 
 
-//react hook form supports varoios HTML validation rules like..
-/*required
-minLength maxLength 
-min max 
-patterns*/
+/*here we are integrated yup with react hookform for validation purpose */
 
-/*in this we manage form 
-validate the form 
-and display the errors*/
-
-function YoutubeForm() {
+function YoutubeFormYup() {
   const {
     register,
     handleSubmit,
@@ -30,10 +23,10 @@ function YoutubeForm() {
   const onSubmit = (data) => {
     console.log("data==>", data);
   };
-
   return (
     <Box>
-      <Heading>youtube Form Data</Heading>
+      <Heading>Youtube Form integrated yup</Heading>
+
       <form onSubmit={handleSubmit(onSubmit)}>
         <FormControl>
           <FormLabel>Username</FormLabel>
@@ -84,4 +77,4 @@ function YoutubeForm() {
   );
 }
 
-export default YoutubeForm;
+export default YoutubeFormYup;

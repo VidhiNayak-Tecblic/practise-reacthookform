@@ -1,14 +1,14 @@
-import logo from "./logo.svg";
 import "./App.css";
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider } from "@chakra-ui/react";
 
 import YoutubeForm from "./Components/YoutubeForm";
-
+import YoutubeFormYup from "./Components/YoutubeFormYup";
 
 function App() {
   return (
     <ChakraProvider>
-     <YoutubeForm/>
+      <YoutubeForm />
+      <YoutubeFormYup />
     </ChakraProvider>
   );
 }
